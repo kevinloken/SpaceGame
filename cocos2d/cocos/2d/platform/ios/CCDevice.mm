@@ -128,6 +128,10 @@ static CCAccelerometerDispatcher* s_pAccelerometerDispatcher;
             
         case UIInterfaceOrientationPortrait:
             break;
+            
+        // KML fix warning for unhandled orientation
+        case UIInterfaceOrientationUnknown:
+            break;
     }
 
     cocos2d::EventAcceleration event(*_acceleration);
